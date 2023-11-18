@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#212121;
+}
+.main{
+  display: flex;
+  justify-content: center;
+  transform: translateY(30%);
+ 
+}
+.head{
+    padding: 30px;
+   background-color: rgb(34, 77, 63);
+   border-radius: 5px;
+   border: 1px solid black;
+}
+button{
+    background-color: chocolate;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    
+}
+h1{
+    color: aliceblue;
+}

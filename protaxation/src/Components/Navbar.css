@@ -1,0 +1,155 @@
+/* Navbar.css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Sub-nav {
+  position: absolute;
+  text-align: start;
+  background-color: #00223e;
+  display: none;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.Services:hover .Sub-nav {
+  display: flex;
+  opacity: 1;
+}
+.Services li:hover{
+  background-color: #2e628d97;
+
+  
+}
+.form,.tax{
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #00223e;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: max-content;
+  z-index: 2;
+}
+.form{
+right: 132px;
+top:5px;
+}
+.tax{
+  left: 132px;
+  top:49px;
+}
+.Individuals:hover .form,
+.Businessses:hover .tax  {
+  display: flex;
+  opacity: 1;
+}
+
+
+.navbar {
+  background: linear-gradient(to right, #164863, #00223e);
+  color: white;
+  font-size: 1.3rem;
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 5rem 1fr 0.5fr 1fr 5rem;
+}
+.add{
+  width: 500px;
+  z-index: 100;
+  
+}
+.nav-logo {
+  grid-column: 2/3;
+}
+
+.nav-link ul {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-link ul li {
+  padding: 10px;
+}
+
+.material-symbols-outlined {
+  display: none;
+  cursor: pointer;
+}
+
+.nav-link ul li {
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .material-symbols-outlined {
+    display: block;
+    grid-column: 5/6;
+  }
+
+  .nav-link {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+  }
+.Sub-nav {
+  background-color: rgba(0, 0, 0, 0.298);
+  width: 100%;
+  text-align: end;
+  width: 100%;
+}
+.Individuals .form,.tax{
+  position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.298);
+    width: 100%;
+}
+  .nav-link span {
+    padding: 10px;
+  }
+
+  .menu-visible {
+    display: block;
+    flex-direction: column;
+  }
+  .menu-visible li:hover{
+    background-color: rgba(0, 0, 0, 0.298);
+    width: 100%;
+    text-align: end;
+  }
+  .Sub-nav ,.form,.tax{
+    max-width: 0;
+    top:0;
+    transition: max-width 0.3s ease-in-out;
+    right: 0; 
+  }
+
+  .Services:hover .Sub-nav ,.mob .tax,.Indi .form{
+    max-width: 100%;
+    display: flex;
+    position: relative;
+  }
+  
+  .nav-link ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
