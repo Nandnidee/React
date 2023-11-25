@@ -1,0 +1,20 @@
+.main-head{
+    color: #09334a;
+    font-weight: 700;
+   padding: 20px;
+   font-size: 2rem;
+}
+hr{
+    margin: 0 20px;
+    color: #09334a;
+    border: #5b90ac 2px solid;
+}
+.head{
+    padding: 10px 0px 0px 20px;
+    font-size: 1.4rem;
+    color: #053047;
+}
+.subtext{
+    padding: 0px 0px 0px 40px;
+    font-size: 1.05rem;
+}

@@ -1,0 +1,17 @@
+.for{
+    background-color: white;
+    display: flex;
+    color: black;
+    box-shadow: none;
+    margin: 0 30px;
+}
+.text{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.input{
+    max-width: 400px;
+    max-height: 50px;
+}

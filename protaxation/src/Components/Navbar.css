@@ -4,12 +4,19 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.Sub-nav {
+.logo{
+  height: 50px;
+  width: 170px;
+  background-color: rgb(240, 248, 255);
+  border-radius: 10px;
+  
+}
+.Sub-nav,
+.form,
+.tax {
   position: absolute;
   text-align: start;
   background-color: #00223e;
-  display: none;
   flex-direction: column;
   backdrop-filter: blur(5px);
   border-radius: 5px;
@@ -17,57 +24,42 @@
   transition: opacity 0.5s ease-in-out;
   z-index: 2;
 }
-
-.Services:hover .Sub-nav {
-  display: flex;
-  opacity: 1;
-}
-.Services li:hover{
-  background-color: #2e628d97;
-
-  
-}
-.form,.tax{
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  background-color: #00223e;
-  backdrop-filter: blur(5px);
-  border-radius: 5px;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.form
+{
+  left: 132px;
+  top: 0;
   width: max-content;
-  z-index: 2;
-}
-.form{
-right: 132px;
-top:5px;
 }
 .tax{
-  left: 132px;
-  top:49px;
+  right: 132px;
+  top: 46px;
+  width: max-content;
 }
+
+.Sub-nav li:hover{
+  background-color: #3877aa81;
+}
+.Services:hover .Sub-nav,
 .Individuals:hover .form,
-.Businessses:hover .tax  {
+.Businesses:hover .tax {
   display: flex;
   opacity: 1;
 }
 
-
 .navbar {
-  background: linear-gradient(to right, #164863, #00223e);
+  background: linear-gradient(to right, #1d526e, #022b4d);
   color: white;
   font-size: 1.3rem;
   padding: 10px;
   display: grid;
+  width: 100%;
   align-items: center;
   grid-template-columns: 5rem 1fr 0.5fr 1fr 5rem;
-}
-.add{
-  width: 500px;
+  position: fixed;
   z-index: 100;
   
 }
+
 .nav-logo {
   grid-column: 2/3;
 }
@@ -75,6 +67,10 @@ top:5px;
 .nav-link ul {
   display: flex;
   justify-content: space-between;
+}
+a{
+  color: white;
+  text-decoration: none;
 }
 .nav-link ul li {
   padding: 10px;
@@ -91,6 +87,7 @@ top:5px;
   text-decoration: none;
 }
 
+/* Responsive styles */
 @media (max-width: 1000px) {
   .material-symbols-outlined {
     display: block;
@@ -106,22 +103,9 @@ top:5px;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
+    z-index: 1;
   }
-.Sub-nav {
-  background-color: rgba(0, 0, 0, 0.298);
-  width: 100%;
-  text-align: end;
-  width: 100%;
-}
-.Individuals .form,.tax{
-  position: absolute;
-    height: 100%;
-    left: 0;
-    right: 0;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.298);
-    width: 100%;
-}
+
   .nav-link span {
     padding: 10px;
   }
@@ -130,24 +114,47 @@ top:5px;
     display: block;
     flex-direction: column;
   }
-  .menu-visible li:hover{
+
+  .menu-visible li:hover {
     background-color: rgba(0, 0, 0, 0.298);
     width: 100%;
     text-align: end;
   }
-  .Sub-nav ,.form,.tax{
+
+  .Sub-nav,
+  .form,
+  .tax {
+    background-color: rgba(69, 68, 68, 0.107);
     max-width: 0;
-    top:0;
     transition: max-width 0.3s ease-in-out;
-    right: 0; 
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    right: 0;
+    top: 100%;
   }
 
-  .Services:hover .Sub-nav ,.mob .tax,.Indi .form{
+  .tax,
+  .form {
+    left: 0;
+    text-align: left;
+  }
+
+  .Services:hover .Sub-nav,
+  .Individuals.active .form,
+  .Businesses.active .tax {
     max-width: 100%;
     display: flex;
     position: relative;
   }
-  
+
+  .Indi .form,
+  .Bus .tax {
+    max-width: 100%;
+    display: flex;
+   
+  }
+
   .nav-link ul {
     flex-direction: column;
     align-items: flex-end;

@@ -1,0 +1,62 @@
+.form_main {
+   background-image: url('../asset/building.jpg');
+   width: 100%;
+   background-size: cover; 
+   background-position: center;
+   padding: 100px 0px 25px 0px;
+   justify-content: end;
+   display: flex;
+   height: fit-content;
+ }
+ form{
+   background-color:#2a2a2a96 ;
+   backdrop-filter: blur(5px);
+   display: flex;
+   flex-direction: column;
+   row-gap: 20px;
+    color: white;
+    width: 400px;
+    padding: 20px;
+    margin:  40px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+ }
+ .heading{
+   font-size: 2rem;
+ }
+ .heading,.sub{
+   text-align: center;
+ }
+.input{
+   padding: 2px;
+}
+.submit:hover{
+   background-color: rgba(0, 0, 0, 0.334);
+   border: none;
+   color: white;
+   padding: 5px;
+}
+.option{
+   padding: 3px;
+}
+.submit{
+   padding: 5px;
+   border: none;
+   font-size: 1rem;
+}
+.area{
+   height: 50px !important;
+   width: 100% !important;
+}
+@media (max-width: 800px){
+   .form{
+      align-items: center;
+      justify-content: center;
+      min-width: 400px;
+      
+   }
+   .form_main{
+      padding: 100px 0px 25px 0px;
+      align-items: center;
+      justify-content: center;
+   }
+}
