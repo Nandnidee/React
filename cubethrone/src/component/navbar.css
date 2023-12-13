@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: black;
+    color: white;
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 10rem 1fr 0.3fr 1fr 3rem ;
+    height: 100px;
+}
+.logo{
+    grid-area: 1/2;
+height: 70px;
+}
+.menu{
+    display: none;
+}
+.page {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: 1/4;
+    font-size: 1.3rem;
+    list-style: none;
+    align-items: center;
+  
+}
+.cube{
+    display: none;
+}
+.page li:hover{
+    transition: 0.5s all;
+    cursor: pointer;
+    color: rgb(20, 176, 20);
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:1000px) {
+    .navbar{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    .page{
+        display: none;
+    }
+    
+    .menu{   
+        align-items: center;
+        display: flex;
+        font-size: 5rem;
+    }
+    .cube{
+        display: flex;
+        align-items: center;
+        font-size: 5rem;
+    }
+    .open{
+        display: flex;
+        flex-direction: column;
+    }
+}

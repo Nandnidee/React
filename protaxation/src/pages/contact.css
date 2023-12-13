@@ -2,16 +2,24 @@
     background-color: white;
     display: flex;
     color: black;
-    box-shadow: none;
-    margin: 0 30px;
-}
-.text{
-    color: black;
+    margin: 0 50px;
+    align-items: center;
+    column-gap: 15px;
+    padding: 15px;
     font-size: 1.2rem;
-    font-weight: 500;
-}
+    background-color: rgba(172, 178, 213, 0.805);
+    width: 50%;
+    margin:  25px 20px; 
+    box-shadow: 2px 3px 10px black;
+    border-radius: 30px;
 
-.input{
-    max-width: 400px;
-    max-height: 50px;
+}
+.for:hover{
+    background-color: rgba(149, 159, 212, 0.805);
+}
+.m{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
