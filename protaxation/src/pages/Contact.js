@@ -7,13 +7,13 @@ export default function Contact(){
         <>
         <p className="main-head ">Contact US</p>
         <div className='m'>
-        <div className='for'>
+        <a href='https://wa.me/+16072951196' target='_blank' ><div className='for'>
 
         <img src={whatsapp}  />+16072951196
-        </div>
-        <div className='for'>
+        </div></a>
+        <a href='https://wa.me/+12092004304' target='_blank' > <div className='for'>
         <img src={whatsapp}/>+12092004304
-        </div>
+        </div></a>
         <div className='for'>
             <img src={location}/>4795 Commercial Drive
 New Hartford, NY 13413

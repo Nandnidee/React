@@ -10,21 +10,25 @@ import Foreign from '../pages/foreign';
 import Tax from '../pages/Corporate tax';
 import LOGO from '../asset/LOGO-removebg.png'
 const Navbar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const handleMenuToggle = () => {
+  let [isMenuOpen, setMenuOpen] = useState(false);
+  let handleMenuToggle = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const [isIndividualsOpen, setIndividualsOpen] = useState(false);
-  const toggleIndividuals = () => {
+  let [isIndividualsOpen, setIndividualsOpen] = useState(false);
+  let toggleIndividuals = () => {
     setIndividualsOpen(!isIndividualsOpen);
+    // Close the Businesses section when opening Individuals
+    setBusinessesOpen(false);
   };
 
-  const [isBusinessesOpen, setBusinessesOpen] = useState(false);
-  const toggleBusinesses = () => {
-    setBusinessesOpen(!isBusinessesOpen);
-  };
-const menu =()=>{
+ let [isBusinessesOpen, setBusinessesOpen] = useState(false);
+ let toggleBusinesses = () => {
+  setBusinessesOpen(!isBusinessesOpen);
+  // Close the Individuals section when opening Businesses
+  setIndividualsOpen(false);
+};
+let menu =()=>{
   isIndividualsOpen=false;
   setIndividualsOpen(isIndividualsOpen);
   isBusinessesOpen=false;

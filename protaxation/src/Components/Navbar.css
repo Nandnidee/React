@@ -140,6 +140,12 @@ a{
     text-align: left;
   }
 
+  .Individuals .form,
+  .Businesses .tax {
+    max-width: 100%;
+    display: flex;
+  }
+
   .Services:hover .Sub-nav,
   .Individuals.active .form,
   .Businesses.active .tax {
@@ -152,11 +158,12 @@ a{
   .Bus .tax {
     max-width: 100%;
     display: flex;
-   
   }
 
   .nav-link ul {
     flex-direction: column;
     align-items: flex-end;
   }
+
+
 }
