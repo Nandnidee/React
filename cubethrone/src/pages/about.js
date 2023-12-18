@@ -1,5 +1,7 @@
 import './about.css';
+
 import logo from '../asset/Cubethrone_Logo.png'
+import Social from '../component/social';
 export default function About(){
     return(
         <div className="about">
@@ -8,11 +10,9 @@ export default function About(){
                 <h1 className='cubethrone-name'>CubeThrone</h1>
                 <p className='unity'>Unity Devloper</p>
                 <a href=' https://www.fiverr.com/cubethrone' target='_blank' className='hire'>Hire Me</a>
-                <div className='social' >
-                    
-                </div>
+             <Social/>
             </div>
-            <img src={logo} alt="IMAGE" className='rotating-container'/>
+            <img src={logo} alt="CUBETHRONE" className='rotating-container'/>
         </div>
     );
 }
