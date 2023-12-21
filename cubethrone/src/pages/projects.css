@@ -1,3 +1,141 @@
-.project-main{
-    color:white;
+.project-main {
+    color: white;
+    margin-top: 10px;
+    padding: 30px;
+  }
+  
+  .project {
+    font-size: 2rem;
+  }
+  
+  hr {
+    margin: 10px 0;
+  }
+  
+  .pro {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10px;
+    justify-content: space-around;
+  }
+  
+  .card {
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: rgb(27, 27, 27);
+    width: 310px;
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .play{
+    background-color: #2165cb;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px;
+    color: black;
+    font-weight: 600;
+
+  }
+  .play:hover{
+    background-color: rgba(78, 156, 245, 0.722)
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+  /* Add this to your projects.css or create a new CSS file */
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgb(12, 11, 11);
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  
+}
+
+.head {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-img {
+  overflow: hidden;
+  width: 100%;
+  max-height: 250px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.x {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.video,.image-gallery img  {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dis {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.image-gallery {
+  position: relative;
+}
+.gallery-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.gallery-controls button {
+  background: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.gallery-controls button:hover {
+  background: #1e1f1f;
+}
+
+@media (max-width: 1000px) {
+   .head h2 , .x{
+    font-size: 3rem;
+   }
+   .dis ,.play{
+    font-size: 1.5rem;
+   }
 }

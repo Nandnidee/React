@@ -8,6 +8,7 @@
 }
 .rotating-container {
     animation: rotate 15s linear infinite;
+    
   }
   
   @keyframes rotate {
@@ -70,14 +71,14 @@
         font-weight: bold;
       }
       .rotating-container {
-        height: 40vh;
-        margin: 100px;
+        height: 30vh;
+        margin: 70px;
       }
       .cubethrone-name{
         font-size: 4rem;
       }
       .unity{
-       font-size: 2.7rem;
+       font-size: 7rem;
       }
       .hire{
         text-align: center;

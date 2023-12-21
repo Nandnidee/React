@@ -6,12 +6,18 @@
     justify-content: space-between;
 
   }
-.insta , .what,.fiver,.play{
+.insta , .what,.fiver,.play,.you,.git{
   height: 50px;
   border-radius: 50%;
     transition: transform 0.3s ease-in-out;
 }
-.instagram:before,.whatsapp:before ,.fiverr:before,.playstore:before {
+.git{
+  background-color: white;
+}
+.instagram,.whatsapp ,.fiverr,.playstore,.youtube,.github {
+  position: relative;
+}
+.instagram:before,.whatsapp:before ,.fiverr:before,.playstore:before,.youtube::before ,.github::before{
   content: "";
   z-index: -1;
   position: absolute;
@@ -31,18 +37,42 @@
 .instagram:before{
   background: linear-gradient(-45deg, #ff0101a3 0%, #0033ffca 100% );
 }
-  .playstore:before{
+  .playstore:before,.github::before{
     background: linear-gradient(-45deg, #837c7c 0%, #7e7b7b 100% );
+  }  
+  .youtube:before{
+    background: linear-gradient(-45deg, #ff0f0f 0%, #ff0000 100% );
   }    
 .mid:hover .insta,
 .mid:hover .what,
 .mid:hover .itch,
 .mid:hover .fiver,
-.mid:hover .play {
+.mid:hover .play,
+.mid:hover .you ,
+.mid:hover .git{
   transform: scale(1.1);
 }
 @media (max-width:1000px){
     .social{
-        padding: 0 20px;
+        padding: 0 40px;
+      justify-content: center;
+      gap: 20px;
+  }
+ 
+  .insta , .what,.fiver,.play,.you,.git{
+    margin-top: 70px;
+    height: 100px;
+  }
+  
+  .instagram:before,.whatsapp:before ,.fiverr:before,.playstore:before,.youtube:before ,.github::before{
+    content: "";
+    z-index: -1;
+    position: absolute;
+    margin-top: 80px;
+    transform: translate3d(0px, 2px, 0px) scale(0.9);
+    filter: blur(20px);
+    opacity: var(0.8);
+    transition: opacity 0.3s;
+    border-radius: inherit;
   }
 }

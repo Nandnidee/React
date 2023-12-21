@@ -1,69 +1,106 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.navbar{
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
     background-color: black;
+    position: relative;
     color: white;
     display: grid;
     margin-top: 10px;
-    grid-template-columns: 5rem 1fr 0.3fr 1fr 3rem ;
-    height: 100px;
-}
-.logo{
+    grid-template-columns: 5rem 1fr 0.3fr 1fr 3rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
     grid-area: 1/2;
-height: 70px;
-
-margin-top: 20px;
-}
-.menu{
+    height: 70px;
+    margin-top: 20px;
+  }
+  
+  .cube {
     display: none;
-}
-.page {
+  }
+  
+  .menu {
+    display: none;
+  }
+  
+  .page {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-area: 1/4;
     font-size: 1.3rem;
     list-style: none;
     align-items: center;
+  }
   
-}
-.cube{
-    display: none;
-}
-.page li:hover{
-    transition: 0.5s all;
+  .page li {
+    transition: 0.3s color;
+  }
+  
+  .page li:hover {
     cursor: pointer;
     color: rgb(20, 176, 20);
-}
-a{
+  }
+  
+  .clicked {
+    color: rgb(20, 176, 20);
+  }
+  
+  a {
     color: white;
     text-decoration: none;
-}
-
-@media (max-width:1000px) {
-    .navbar{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 30px;
+  }
+  
+  .menu {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 1000px) {
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .page{
-        display: none;
+  
+    .menu,
+    .cube {
+      display: flex;
+      align-items: center;
+      font-size: 4rem;
+      position: relative;
     }
-    
-    .menu{   
-        align-items: center;
-        display: flex;
-        font-size: 5rem;
+  
+    .page {
+      display: none;
     }
-    .cube{
-        display: flex;
-        align-items: center;
-        font-size: 3rem;
+  
+    .open {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: black;
+      top: 100px;
+      transition: 3s ease-in-out  linear;
+      z-index: 999;
+      box-shadow: 0 9px 6px rgba(255, 255, 255, 0.1);
     }
-    .open{
-        display: flex;
-        flex-direction: column;
+    .link {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      transition: background-color 0.3s ease-in-out; /* Add transition for background-color */
+      font-size: 2rem;
     }
-}
+  }
+  
