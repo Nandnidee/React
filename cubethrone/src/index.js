@@ -6,21 +6,12 @@ import About from './pages/about';
 import Services from './pages/services';
 import Projects from './pages/projects';
 import Contact from './pages/contact_us';
-
+import App from './app';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
-    <Router>
-  <Navbar/>
-      <Routes>
-        <Route path="/" element={<About />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact_us" element={<Contact />} />
-      </Routes>
-    </Router>
+   <App/>
   </React.StrictMode>
 );
 
